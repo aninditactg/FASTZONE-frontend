@@ -1,9 +1,12 @@
-import React from 'react'
+import { getUsers } from "@/lib/actions";
+import UsersClient from "@/components/users/UsersClient";
 
-function page() {
-  return (
-    <div>users</div>
-  )
+export const dynamic = "force-dynamic";
+
+export default async function UsersPage() {
+  // Fetch users from backend via server API
+  const res = await getUsers();
+  const users = res.success && res.data ? res.data : [];
+
+  return <UsersClient initialUsers={users} />;
 }
-
-export default page

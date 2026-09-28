@@ -22,38 +22,13 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    label: "HRM",
-    icon: <Building2 size={28} strokeWidth={1.5} />,
-    href: "/HRM",
-  },
-  {
-    label: "Transfer",
-    icon: <ArrowLeftRight size={28} strokeWidth={1.5} />,
-    href: "/Transfer",
-  },
-  {
-    label: "Accounting",
-    icon: <Wallet size={28} strokeWidth={1.5} />,
-    href: "/Accounting",
-  },
-  {
     label: "People",
     icon: <Users size={28} strokeWidth={1.5} />,
     children: [
-      { label: "Customers", href: "/People/Customers" },
-      { label: "Suppliers", href: "/People/Suppliers" },
-      { label: "Users", href: "/People/users" },
+      { label: "Customers", href: "/people/customers" },
+      { label: "Suppliers", href: "/people/suppliers" },
+      { label: "Users", href: "/people/users" },
     ],
-  },
-  {
-    label: "Projects",
-    icon: <BoxSelect size={28} strokeWidth={1.5} />,
-    href: "/Projects",
-  },
-  {
-    label: "Tasks",
-    icon: <ClipboardList size={28} strokeWidth={1.5} />,
-    href: "/Tasks",
   },
 ];
 
